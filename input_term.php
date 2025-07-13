@@ -14,7 +14,7 @@
 
 		else
 
-			readline(PHP_EOL.$p1)
+			readline(PHP_EOL.$p1);
 
 	}
 
