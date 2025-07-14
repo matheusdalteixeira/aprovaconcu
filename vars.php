@@ -14,9 +14,7 @@
 
     $funcoes_menu[5] = "simular prova";     //  implementar
 
-    $funcoes_menu[6] = "apagar variáveis";  //  implementar
-
-    $funcoes_menu[7] = "estatisticas";      //  implementar
+    $funcoes_menu[6] = "estatisticas";      //  implementar
 
     $total_fun_menu = (string) count($funcoes_menu);
 
