@@ -9,3 +9,5 @@ rep_add_arr.php
 valida_seq_tipo.php
 vars.php
 cria_pasta.php
+retira_indices_arr.php
+ajusta_seq_indices_arr.php
