@@ -36,7 +36,7 @@
 
                         echo PHP_EOL."erro de tipo passado como parâmetro para essa função";
 
-                        echo PHP_EOL."$corrija o tipo {$p}";
+                        echo PHP_EOL."corrija o tipo {$p}";
 
                         return false;
 
