@@ -12,7 +12,7 @@
 
                         while(isset($p1[++$a])){
 
-                                if($p1[$$a] == $p2){
+                                if($p1[$a] == $p2){
 
                                         unset($p1[$a]);
 
