@@ -16,6 +16,8 @@
 
                                 echo PHP_EOL."[".$a."]".$p[$a];
 
+                        return true;
+
                 }
 
                 else{
