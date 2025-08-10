@@ -1,9 +1,19 @@
 <?php
-        function cria_pasta($p){
-                if(!mkdir("pasta")){
-                        echo PHP_EOL."erro na criação da pasta {$p}";
-                        return false;
+                if(!file_exists("questoes")){
+
+                        echo PHP_EOL."pasta -questoes- não existe;";
+
+                        if(!mkdir("questoes")){
+
+                                echo PHP_EOL."erro desconhecido ao tentar criá-la";
+
+                                exit;
+
+                        }
+
+                        else
+
+                                echo PHP_EOL."criada com sucesso";
+
                 }
-                return true;
-        }
 ?>
