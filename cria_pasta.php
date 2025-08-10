@@ -1,19 +1,47 @@
 <?php
-                if(!file_exists("questoes")){
 
-                        echo PHP_EOL."pasta -questoes- não existe;";
+        function cria_pasta($p){
 
-                        if(!mkdir("questoes")){
+                $v_vars = [$p];
 
-                                echo PHP_EOL."erro desconhecido ao tentar criá-la";
+                $t_vars = ["string"];
 
-                                exit;
+                if(valida_seq_tipo($v_vars, $t_vars)){
+
+                        if(!file_exists($p)){
+
+                                echo PHP_EOL."pasta -{$p}- não existe;";
+
+                                if(!mkdir($p)){
+
+                                        echo PHP_EOL."erro desconhecido ao tentar criá-la";
+
+                                        return false;
+
+                                }
+
+                                else{
+
+                                        echo PHP_EOL."criada com sucesso";
+
+                                        return true;
+
+                                }
 
                         }
 
-                        else
+                }
 
-                                echo PHP_EOL."criada com sucesso";
+                else{
+
+                        echo PHP_EOL."erro de tipo passado como parâmetro para essa função";
+
+                        echo PHP_EOL."$corrija o tipo {$p}";
+
+                        return false;
 
                 }
+
+        }
+
 ?>
