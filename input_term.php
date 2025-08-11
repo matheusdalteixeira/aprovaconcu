@@ -1,21 +1,19 @@
 <?php
 
-	function input_term($p1,$p2){
+        function input_term($p){
 
-		if(isset($p2)){
-			
-			$a = -1;
-			
-			do{ $temp = readline(PHP_EOL.$p1); }while($temp > $p2 || $temp < 0);
+                $v_vars = [$p];
 
-			return $temp;
-			
-		}
+                $t_vars = ["string"];
 
-		else
+                if(valida_seq_tipo($v_vars, $t_vars))
 
-			readline(PHP_EOL.$p1);
+                        return readline(PHP_EOL.$p);
 
-	}
+                else
+
+                        return false;
+
+        }
 
 ?>
