@@ -2,27 +2,37 @@
 
 function apaga_arquivo($p){
 
-	global $v_vars, $t_vars;
-	
-	$v_vars = [$p];
-	
-	$t_vars = ["string"];
+        global $v_vars, $t_vars;
 
-	if(
+        $v_vars = [$p];
 
-		valida_seq_tipo($v_vars, $t_vars) 	&&
+        $t_vars = ["string"];
 
-		file_exists($p)				&&
+        $msg = PHP_EOL."Arquivo {$p} ";
 
-		unlink($p)
+        if(
 
-	)
+                valida_seq_tipo($v_vars, $t_vars)       &&
 
-		echo PHP_EOL."Arquivo {$p} deletado com sucesso";
+                file_exists($p)                         &&
 
-	else
+                unlink($p)
 
-		return false;
+        ){
+
+                echo PHP_EOL.$msg."deletado com sucesso";
+
+                return true;
+
+        }
+
+        else{
+
+                echo PHP_EOL.$msg."não deletado";
+
+                return false;
+
+        }
 
 }
 
